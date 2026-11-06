@@ -107,16 +107,17 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 <div class="wrap">
   <header>
     <div class="eyebrow">Used-car check · 6 Nov 2026 · SK · CZ · AT · DE</div>
-    <h1>Tesla Model Y Juniper AWD for sale</h1>
-    <p class="criteria">All-wheel drive (Long Range or Performance), refreshed design (2025+), up to 70 000 km and 55 000 €. Every ad below was opened and checked today.</p>
+    <h1>Tesla Model Y AWD with HW4 for sale</h1>
+    <p class="criteria">All-wheel drive (Long Range or Performance) with the HW4 / AI4 computer: every Juniper (2025+), plus 2024 cars built after the HW4 switch. Up to 70 000 km and 55 000 €. Austria, Germany, Czechia and Slovakia.</p>
     <div class="seg region" role="group" id="f-region" aria-label="Where">
-      <button type="button" data-region="EU" aria-pressed="true">EU: Austria &amp; Germany</button>
+      <button type="button" data-region="EU" aria-pressed="true">EU: Austria, Germany &amp; Czechia</button>
       <button type="button" data-region="SK" aria-pressed="false">Slovakia only</button>
     </div>
     <div class="stats" id="stats"></div>
   </header>
 
   <section class="note" aria-label="About FSD">
+    <p><strong>HW4 on 2024 cars:</strong> Berlin-built Model Ys got HW4 from about September 2024, Shanghai-built ones from February 2024. Cars registered in 8–9/2024 are in the changeover, so they're marked "HW4 unconfirmed" until the seller shows Controls › Software.</p>
     <p><strong>FSD in Slovakia:</strong> approved on 16 Oct 2026 (called "Tesla Assisted Driving" in Europe). It needs the AI4 computer (HW4), which every Juniper has.</p>
     <p><strong>Software screen photo:</strong> on the car's screen under Controls › Software, it shows the computer ("Computer für Full Self-Driving 4" = HW4) and the Autopilot package. Only two ads include it, and both show basic Autopilot, not FSD. For the others, ask the seller for that photo.</p>
   </section>
@@ -144,7 +145,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 
   <footer>
     <span>Sold or removed since this morning: Stuttgart (44 900 €), Engerwitzdorf (52 450 €) and Solingen (53 500 €).</span>
-    <span>Czechia: no match. Sauto.cz, TipCars and Bazoš couldn't be read, nor could Tesla's own used inventory or mobile.de.</span>
+    <span>Also checked: DriveTesla.sk (two Junipers, both reserved, 56 490 € and 58 190 €), AAA Auto SK and CZ (no 2024+ AWD under the limits). Not readable: Sauto.cz, mobile.de, Tesla used inventory; TipCars only partly.</span>
     <span>Photos load from AutoScout24. Data is as stated by sellers; check the VIN history before buying.</span>
   </footer>
 </div>
@@ -153,6 +154,47 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 const P = id => "https://prod.pictures.autoscout24.net/listing-images/" + id + ".jpg/720x540.webp";
 const AD = g => "https://www.autoscout24.de/angebote/" + g;
 const cars = [
+  { name:"Model Y Long Range AWD 79 kWh", price:39990, year:"8/2024", km:40000, cc:"A", plate:"G", town:"Graz, AT", seller:"Private seller", tr:300, dist:"~200 km", vat:0,
+    ext:P("6b666b1e-51cd-465e-9d89-b1bef5d44413_6c7f3128-3b9a-4b70-bb1f-b4b7e71b980e"), sw:null,
+    url:AD("6b666b1e-51cd-465e-9d89-b1bef5d44413"),
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 unconfirmed","warn"]],
+    facts:["Registered 8/2024, the month Berlin switched to HW4: ask for a photo of Controls › Software","Listing says 40 000 km, ad text says 29 000 km"] },
+  { name:"Model Y Long Range AWD", price:41000, year:"9/2024", km:37000, cc:"A", plate:"FE", town:"Feldkirchen, AT", seller:"Private seller", tr:350, dist:"~400 km", vat:0,
+    ext:P("1b10aef4-4453-47bf-a70c-9e4482e5a71d_49371b43-aca4-4b79-8e8f-9db2ef7e1726"), sw:null,
+    url:AD("1b10aef4-4453-47bf-a70c-9e4482e5a71d"),
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 per seller","good"],["FSD not listed","warn"]],
+    facts:["Seller writes \"HW4\" in the ad; VAT can be shown","Mostly charged at home"] },
+  { name:"Model Y Long Range Dual Motor AWD", price:41500, year:"8/2024", km:58000, cc:"D", plate:"C", town:"Chemnitz, DE", seller:"Private seller", tr:550, dist:"~600 km", vat:0,
+    ext:P("c0a08a58-bb64-4e68-afc4-9581a5170f20_4d46603a-cf97-44d6-ae7a-128edecbb41f"), sw:null,
+    url:AD("c0a08a58-bb64-4e68-afc4-9581a5170f20"),
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 unconfirmed","warn"],["Enhanced Autopilot","good"]],
+    facts:["Ad says \"Enhanced Autopilot 3\", which may hint at HW3: check before viewing","Only one photo; tow bar, winter tyres"] },
+  { name:"Model Y Long Range Dual Motor AWD, tow bar", price:41900, year:"8/2024", km:38500, cc:"A", plate:"KL", town:"Magdalensberg, AT", seller:"Private seller", tr:350, dist:"~330 km", vat:0,
+    ext:P("f2d66152-9319-477a-b8c1-20c055f12bd4_eee4a4a0-87c4-4617-ab4a-a940a0739f39"), sw:null,
+    url:AD("f2d66152-9319-477a-b8c1-20c055f12bd4"),
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 unconfirmed","warn"]],
+    facts:["White interior; lease takeover at 1.49 % possible","Registered 8/2024, right at the HW4 changeover"] },
+  { name:"Model Y Performance AWD, Quicksilver", price:43500, year:"9/2024", km:39900, cc:"A", plate:"FK", town:"Feldkirch, AT", seller:"Private seller", tr:350, dist:"~720 km", vat:0,
+    ext:P("5aff4897-4ba2-47f3-9929-c1bfe236461f_74d5e2be-0354-4129-82f5-8a5f8be291f0"), sw:null,
+    url:AD("5aff4897-4ba2-47f3-9929-c1bfe236461f"),
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 unconfirmed","warn"]],
+    facts:["Tow bar, summer and winter wheels"] },
+  { name:"Model Y Long Range Dual Motor AWD, Quicksilver", price:43900, year:"11/2024", km:50000, cc:"A", plate:"IL", town:"Stams, AT", seller:"Private seller", tr:350, dist:"~580 km", vat:0,
+    ext:P("e20b28d0-36c8-4022-a838-fcfb1faede22_71c96bd3-1fe9-480f-892a-e6515b0e3156"), sw:null,
+    url:AD("e20b28d0-36c8-4022-a838-fcfb1faede22"),
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 likely","good"],["Enhanced Autopilot","good"]],
+    facts:["Built late 2024 in Berlin, after the switch to HW4; still confirm","Tesla app screenshot shows Enhanced Autopilot; warranty about 2 more years"] },
+  { name:"Model Y Performance Dual Motor AWD", price:48000, year:"12/2024", km:2300, cc:"D", plate:"OS", town:"Osnabrück, DE", seller:"Private seller", tr:850, dist:"~1 150 km", vat:Math.round(48000*0.23), vatNote:"Under 6 000 km counts as a new vehicle for tax: private sale, so 23 % Slovak VAT on the full price",
+    ext:P("182af77d-6307-4f3d-af8d-6319f86bea77_135c2eb1-5247-453f-a30f-9310827eeede"),
+    sw:P("182af77d-6307-4f3d-af8d-6319f86bea77_65a428e8-3d04-4714-9c2e-065819c085a8"),
+    url:AD("182af77d-6307-4f3d-af8d-6319f86bea77"),
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 confirmed","good"],["Basic Autopilot","warn"]],
+    facts:["Screen photo shows the AI4 computer","Almost new: 2 300 km"] },
+  { name:"Model Y Juniper Premium Long Range AWD", price:49240, year:"6/2025", km:70000, cc:"CZ", plate:"Z", town:"Zlín, CZ", seller:"Private seller (Bazoš.cz)", tr:300, dist:"~170 km", vat:0,
+    ext:"https://www.bazos.cz/img/1/479/224608479.jpg", sw:null,
+    url:"https://auto.bazos.cz/inzerat/224608479/tesla-model-y-juniper-premium-long-range-all-wheel-drive.php",
+    chips:[["Juniper","good"],["FSD not listed","warn"],["At 70 000 km limit","warn"]],
+    facts:["1 199 000 Kč (≈ 24.35 Kč/€); VAT deductible","Warranty to 6/2029 or 80 000 km; Deep Blue, black interior"] },
   { name:"Model Y Dual Motor AWD, white interior", price:55900, year:"4/2025", km:18000, cc:"SK", plate:"SK", town:"Slovakia", seller:"LUXURIUS MOTORS (dealer)", region:"SK", tr:0, dist:"", vat:0, fees:33,
     ext:null, sw:null, url:"https://www.autobazar.eu/en/detail/tesla-model-y-dual-motor-awd-white-interior-dual-screen-autopilot-top/AmUHItJbcf2/",
     chips:[["Juniper (rear screen)","good"],["Basic Autopilot","warn"],["900 € over cap","warn"]],
