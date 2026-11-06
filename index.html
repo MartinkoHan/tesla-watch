@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Model Y Juniper Hunt</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: summary band, then listing cards; each card has exterior photo + software-screen photo side by side. */
+:root {
+  --bg: #f3f4f6; --surface: #ffffff; --fg: #16191f; --muted: #5d6573; --line: #dde1e7;
+  --accent: #1f4fbf; --plate: #ffffff; --plate-fg: #111;
+  --good: #1d7a46; --good-bg: #e3f3ea; --warn: #8a5a00; --warn-bg: #fdf1d8;
+  --bad: #a3261f; --bad-bg: #fbe4e2; --neutral-bg: #eceff3; --ph: #d9dde4;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1216; --surface: #181c22; --fg: #eef0f3; --muted: #9aa3b1; --line: #2a3039;
+    --accent: #6f98ff; --plate: #f4f4f4; --plate-fg: #111;
+    --good: #6fd39a; --good-bg: #183026; --warn: #f0c36a; --warn-bg: #352a12;
+    --bad: #ff8f86; --bad-bg: #3a1916; --neutral-bg: #232830; --ph: #262c35;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1216; --surface: #181c22; --fg: #eef0f3; --muted: #9aa3b1; --line: #2a3039;
+  --accent: #6f98ff; --plate: #f4f4f4; --plate-fg: #111;
+  --good: #6fd39a; --good-bg: #183026; --warn: #f0c36a; --warn-bg: #352a12;
+  --bad: #ff8f86; --bad-bg: #3a1916; --neutral-bg: #232830; --ph: #262c35;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 15px/1.5 var(--body); }
+.wrap {
+  max-width: 1180px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 48px; display: grid; gap: 24px;
+}
+header { display: grid; gap: 10px; }
+.eyebrow { font: 600 12px/1 var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+h1 { font: 700 clamp(30px, 5vw, 44px)/1.02 var(--display); margin: 0; text-wrap: balance; letter-spacing: .01em; }
+.criteria { color: var(--muted); max-width: 70ch; margin: 0; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 28px; font-variant-numeric: tabular-nums; }
+.stat b { font: 600 22px/1.1 var(--display); display: block; }
+.stat span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.note { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; font-size: 14px; }
+.note strong { font-weight: 600; }
+.note p { margin: 0; max-width: 90ch; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.controls label { font-size: 13px; color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg.region { justify-self: start; }
+.seg.region button { font-size: 15px; padding: 11px 16px; font-weight: 600; }
+.seg button { font: 500 13px/1 var(--body); color: var(--fg); background: none; border: 0; padding: 9px 12px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+.seg button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr)); gap: 18px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+.photos { display: grid; grid-template-columns: 3fr 2fr; gap: 2px; background: var(--line); }
+.shot { position: relative; aspect-ratio: 4 / 3; max-width: 100%; background: var(--ph); overflow: hidden; }
+.shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.shot .ph { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: var(--muted); font-size: 12.5px; padding: 12px; line-height: 1.35; }
+.shot .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 4px 8px; font: 600 11px/1.2 var(--body); letter-spacing: .06em; text-transform: uppercase; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.65)); }
+.plate { position: absolute; left: 10px; top: 10px; z-index: 1; display: inline-flex; align-items: stretch; background: var(--plate); color: var(--plate-fg); border: 1.5px solid #111; border-radius: 4px; overflow: hidden; font: 700 15px/1 var(--display); letter-spacing: .06em; box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+.plate i { font-style: normal; background: #1f4fbf; color: #fff; font: 600 9px/1 var(--body); padding: 4px 3px; display: grid; place-items: end center; }
+.plate b { padding: 4px 7px; }
+.body { padding: 14px 16px 16px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.price { font: 700 26px/1 var(--display); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.name { font: 600 17px/1.25 var(--display); letter-spacing: .01em; margin: 0; overflow-wrap: anywhere; }
+dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0; }
+dl div { background: var(--neutral-bg); border-radius: 8px; padding: 7px 9px; min-width: 0; }
+dt { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+dd { margin: 0; font: 500 14px/1.3 var(--mono); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.cost { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; display: grid; gap: 3px; font-size: 13.5px; }
+.cost .row { display: flex; justify-content: space-between; gap: 12px; }
+.cost .row span:last-child { font: 500 13.5px/1.4 var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cost .row span:first-child { color: var(--muted); min-width: 0; }
+.cost .total { border-top: 1px solid var(--line); padding-top: 4px; margin-top: 2px; font-weight: 600; }
+.cost .total span:first-child { color: var(--fg); }
+.cost .total span:last-child { font-weight: 600; font-size: 15px; }
+.vnote { font-size: 12.5px; color: var(--warn); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 500 12px/1 var(--body); padding: 5px 8px; border-radius: 999px; background: var(--neutral-bg); color: var(--fg); }
+.chip.good { background: var(--good-bg); color: var(--good); }
+.chip.warn { background: var(--warn-bg); color: var(--warn); }
+.chip.bad { background: var(--bad-bg); color: var(--bad); }
+.facts { margin: 0; padding-left: 18px; color: var(--muted); font-size: 13.5px; display: grid; gap: 2px; }
+.foot { display: flex; justify-content: space-between; gap: 10px; align-items: center; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 10px; }
+.seller { font-size: 13px; color: var(--muted); }
+.link { font: 600 14px/1 var(--body); color: var(--accent); text-decoration: none; }
+.link:hover { text-decoration: underline; }
+.empty { color: var(--muted); }
+footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
+@media (max-width: 420px) { dl { grid-template-columns: repeat(2, minmax(0, 1fr)); } .photos { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Used-car check · 6 Nov 2026 · SK · CZ · AT · DE</div>
+    <h1>Tesla Model Y Juniper AWD for sale</h1>
+    <p class="criteria">All-wheel drive (Long Range or Performance), refreshed design (2025+), up to 70 000 km and 55 000 €. Every ad below was opened and checked today.</p>
+    <div class="seg region" role="group" id="f-region" aria-label="Where">
+      <button type="button" data-region="EU" aria-pressed="true">EU: Austria &amp; Germany</button>
+      <button type="button" data-region="SK" aria-pressed="false">Slovakia only</button>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <section class="note" aria-label="About FSD">
+    <p><strong>FSD in Slovakia:</strong> approved on 16 Oct 2026 (called "Tesla Assisted Driving" in Europe). It needs the AI4 computer (HW4), which every Juniper has.</p>
+    <p><strong>Software screen photo:</strong> on the car's screen under Controls › Software, it shows the computer ("Computer für Full Self-Driving 4" = HW4) and the Autopilot package. Only two ads include it, and both show basic Autopilot, not FSD. For the others, ask the seller for that photo.</p>
+  </section>
+
+  <section class="note" aria-label="Import costs">
+    <p><strong>Import costs (estimates):</strong> about 400 € in Slovak fees per car: registration fee 33 € for an electric car, originality check ~100 €, approval at the district office 100 €, plates ~55 €, recycling fee 30–50 €, document translation ~60 €. No technical inspection is needed for cars under 4 years old. Transport uses typical carrier prices; driving it home yourself on temporary plates is usually cheaper.</p>
+    <p><strong>VAT:</strong> used cars bought at the listed gross price owe no further VAT. A car under 6 months old <em>or</em> under 6 000 km counts as a new vehicle for tax, and you pay 23 % Slovak VAT on it. That affects Bedburg, Baden and Seitenstetten. I'm not a tax advisor, so confirm with your tax office before buying one of those.</p>
+  </section>
+
+  <div class="controls">
+    <label for="f-km">Show</label>
+    <div class="seg" role="group" id="f-km" aria-label="Mileage filter">
+      <button type="button" data-km="70000" aria-pressed="true">All ≤ 70 000 km</button>
+      <button type="button" data-km="50000" aria-pressed="false">≤ 50 000 km</button>
+    </div>
+    <label for="f-sort">Sort</label>
+    <div class="seg" role="group" id="f-sort" aria-label="Sort">
+      <button type="button" data-sort="price" aria-pressed="true">Price</button>
+      <button type="button" data-sort="total" aria-pressed="false">Total cost</button>
+      <button type="button" data-sort="km" aria-pressed="false">Mileage</button>
+    </div>
+  </div>
+
+  <main class="grid" id="grid"></main>
+
+  <footer>
+    <span>Sold or removed since this morning: Stuttgart (44 900 €), Engerwitzdorf (52 450 €) and Solingen (53 500 €).</span>
+    <span>Czechia: no match. Sauto.cz, TipCars and Bazoš couldn't be read, nor could Tesla's own used inventory or mobile.de.</span>
+    <span>Photos load from AutoScout24. Data is as stated by sellers; check the VIN history before buying.</span>
+  </footer>
+</div>
+
+<script>
+const P = id => "https://prod.pictures.autoscout24.net/listing-images/" + id + ".jpg/720x540.webp";
+const AD = g => "https://www.autoscout24.de/angebote/" + g;
+const cars = [
+  { name:"Model Y Dual Motor AWD, white interior", price:55900, year:"4/2025", km:18000, cc:"SK", plate:"SK", town:"Slovakia", seller:"LUXURIUS MOTORS (dealer)", region:"SK", tr:0, dist:"", vat:0, fees:33,
+    ext:null, sw:null, url:"https://www.autobazar.eu/en/detail/tesla-model-y-dual-motor-awd-white-interior-dual-screen-autopilot-top/AmUHItJbcf2/",
+    chips:[["Juniper (rear screen)","good"],["Basic Autopilot","warn"],["900 € over cap","warn"]],
+    facts:["First owner, no accident, under warranty","Ad lists the rear passenger screen, which only Juniper has"] },
+  { name:"Model Y Long Range AWD 75 kWh", price:55990, year:"7/2025", km:24000, cc:"SK", plate:"KE", town:"Košice, SK", seller:"Michal (dealer)", region:"SK", tr:0, dist:"", vat:0, fees:33,
+    ext:"https://img.autobazar.eu/foto/MTIwMHg5MDAvZmlsdGVyczpxdWFsaXR5KDg1KTpmb3JtYXQoanBnKS9hZXU=/fqmUj-aKu_fss?st=ND84p5j9wExfhyF3wRH6i98nZFKxNmn5P5Nr0Bpj5sQ&ts=1793908388&e=0", sw:null,
+    url:"https://www.autobazar.eu/en/detail/tesla-model-y-75kwh-long-range-awd-258kw351hp-a/Ae2y4fQPFDR/",
+    chips:[["Juniper (7/2025)","good"],["FSD not listed","warn"],["990 € over cap","warn"]],
+    facts:["First owner, full service history, under warranty","45 520 € if you can deduct VAT"] },
+  { name:"Model Y Long Range AWD, white interior", price:56890, year:"6/2025", km:24627, cc:"SK", plate:"GA", town:"Galanta, SK", seller:"EV STORE (dealer)", region:"SK", tr:0, dist:"", vat:0, fees:33,
+    ext:"https://img.autobazar.eu/foto/NTg2eDQ0MC9maWx0ZXJzOnF1YWxpdHkoOTApOmZvcm1hdCh3ZWJwKTp3YXRlcm1hcmsoYXNrL29vX1Zpb2ZXbV9mc3MsY2VudGVyLGNlbnRlciwwLDU1LG5vbmUpL2Fzaw==/nsV12u_BTn_fss?st=tCyy86g0XMUmCbF-hRL1LrlLKTfUY0Rjy7F-ZE2UzN4&ts=1793286961&e=0", sw:null,
+    url:"https://www.autobazar.eu/en/detail/tesla-model-y-2025-long-range-awd-biely-interier-eap-servis-5-rocna-zaruka/AmX4ffKzfzG/",
+    chips:[["Juniper (6/2025)","good"],["Enhanced Autopilot","good"],["1 890 € over cap","warn"]],
+    facts:["Battery health 96 %; factory warranty to 06/2029","Dealer mentions FSD subscription at €49/month"] },
+  { name:"Model Y Long Range AWD, tow bar", price:56890, year:"3/2026", km:24800, cc:"SK", plate:"GA", town:"Galanta, SK", seller:"EV STORE (dealer)", region:"SK", tr:0, dist:"", vat:0, fees:33,
+    ext:"https://img.autobazar.eu/foto/NTg2eDQ0MC9maWx0ZXJzOnF1YWxpdHkoOTApOmZvcm1hdCh3ZWJwKTp3YXRlcm1hcmsoYXNrL29vX1Zpb2ZXbV9mc3MsY2VudGVyLGNlbnRlciwwLDU1LG5vbmUpL2Fzaw==/GnyENbGxN_fss?st=J3I8-JnVwZjHqQW2mQbFtq5zh22ctYt-h4A-7hsU8bg&ts=1792739792&e=0", sw:null,
+    url:"https://www.autobazar.eu/en/detail/tesla-model-y-2026-long-range-awd-servis-5-rocna-zaruka/Am-tbUxNs_W/",
+    chips:[["Juniper (2026)","good"],["FSD not listed","warn"],["1 890 € over cap","warn"]],
+    facts:["Factory warranty to 03/2030","On the lot from 16 Nov 2026"] },
+  { name:"Model Y Premium Long Range Dual AWD", price:46900, year:"9/2025", km:40852, tr:550, dist:"~650 km", vat:0, cc:"D", plate:"NU", town:"Neu-Ulm, DE", seller:"Özcelik GmbH (dealer)",
+    ext:P("3693df04-82a2-4195-912d-a6fc3bec0215_fdfe3ed3-7fbb-4281-a1f3-e85e02b087c8"),
+    sw:P("3693df04-82a2-4195-912d-a6fc3bec0215_5fcfe64a-ceab-4f55-abd4-4e86a4de0ae8"),
+    url:AD("3693df04-82a2-4195-912d-a6fc3bec0215"),
+    chips:[["Juniper","good"],["HW4 confirmed","good"],["Basic Autopilot","warn"],["Damage visible","bad"]],
+    facts:["One ad photo shows a dented rear quarter panel next to the left tail light","Screen photo: AI4 computer, basic Autopilot"] },
+  { name:"Model Y Premium Long Range Dual Motor AWD", price:47990, year:"8/2026", km:2550, tr:800, dist:"~1 150 km", vat:Math.round(47990/1.19*0.23)-Math.round(47990-47990/1.19), vatNote:"New vehicle for tax (under 6 months / 6 000 km): dealer invoices without German VAT, you pay 23 % Slovak VAT", cc:"D", plate:"BM", town:"Bedburg, DE", seller:"Dealer",
+    ext:P("6df1b8fc-a4c6-4073-847d-b81a15556ece_753fc79a-cc36-4b8d-9ac4-cd003c7e530d"), sw:null,
+    url:AD("6df1b8fc-a4c6-4073-847d-b81a15556ece"),
+    chips:[["Juniper (2026)","good"],["FSD not listed","warn"]],
+    facts:["Almost new, 2 550 km","Best value among the low-mileage cars"] },
+  { name:"Model Y Premium Long Range Dual AWD, tow bar", price:48000, year:"3/2025", km:54000, tr:850, dist:"~1 250 km", vat:0, cc:"D", plate:"EL", town:"Sögel, DE", seller:"AutoBruns.EU (dealer)",
+    ext:P("a02af957-b421-4243-ac64-b4fc3a67efa8_37b1fd7e-4fce-440e-9210-58365d4f6d25"),
+    sw:P("a02af957-b421-4243-ac64-b4fc3a67efa8_30353dbd-f2fa-4e79-af4f-1095c71419ee"),
+    url:AD("a02af957-b421-4243-ac64-b4fc3a67efa8"),
+    chips:[["Juniper confirmed","good"],["HW4 confirmed","good"],["Basic Autopilot","warn"]],
+    facts:["Photos show the front light bar; ad lists the 8\" rear screen","Over 50 000 km"] },
+  { name:"Model Y Long Range Dual AWD", price:53989, year:"6/2025", km:39300, tr:300, dist:"~250 km", vat:0, cc:"A", plate:"PE", town:"Arbing, AT", seller:"K & C Automobil GmbH (dealer)",
+    ext:P("488115df-90fb-47e7-a3aa-08fd398d8758_de3ff459-15c6-4dda-a67d-fc9a7be11606"), sw:null,
+    url:AD("488115df-90fb-47e7-a3aa-08fd398d8758"),
+    chips:[["Juniper","good"],["FSD not listed","warn"]],
+    facts:["30 photos, white with black interior"] },
+  { name:"Model Y Long Range AWD 75 kWh", price:54500, year:"6/2026", km:650, tr:200, dist:"~80 km", vat:Math.round(54500/1.2*0.23)-Math.round(54500-54500/1.2), vatWorst:Math.round(54500*0.23), vatNote:"New vehicle for tax (under 6 000 km): you pay 23 % Slovak VAT. Assumes the seller invoices without Austrian VAT; if it is a true private sale, VAT is 23 % of the full price", cc:"A", plate:"BN", town:"Baden, AT", seller:"Private seller",
+    ext:P("ed433478-1625-4781-ac60-be59a61402bb_3800bda1-0dd1-4840-9d86-31dd095489cd"), sw:null,
+    url:AD("ed433478-1625-4781-ac60-be59a61402bb"),
+    chips:[["Juniper (2026)","good"],["FSD not listed","warn"]],
+    facts:["Practically new, 650 km","Ad says VAT can be shown; about 1 hour from Bratislava"] },
+  { name:"Model Y Long Range Dual AWD", price:54980, year:"7/2025", km:17002, tr:350, dist:"~400 km", vat:0, cc:"A", plate:"BR", town:"Braunau, AT", seller:"Reibersdorfer Autowelt GmbH (dealer)",
+    ext:P("8adcb71d-ab13-44a6-8253-1690d9d9c39b_f7e6d151-3932-4b96-b659-8a488d608937"), sw:null,
+    url:AD("8adcb71d-ab13-44a6-8253-1690d9d9c39b"),
+    chips:[["Juniper","good"],["FSD not listed","warn"]],
+    facts:["Grey; screen photos show the car menus but not the Software tab"] },
+  { name:"Model Y Long Range AWD 79 kWh", price:55000, year:"1/2026", km:1000, tr:300, dist:"~230 km", vat:Math.round(55000*0.23), vatNote:"New vehicle for tax (under 6 000 km) from a private seller: 23 % Slovak VAT on the full price", cc:"A", plate:"AM", town:"Seitenstetten, AT", seller:"Private seller",
+    ext:null, sw:null,
+    url:AD("03c7a1a2-d5e0-4044-ae36-f94596a55818"),
+    chips:[["Juniper (2026)","good"],["FSD not listed","warn"]],
+    facts:["Ad has no photos","Exactly at your price cap"] },
+];
+
+const FEES = 400;
+const fee = c => c.fees ?? FEES;
+const total = c => c.price + fee(c) + c.tr + c.vat;
+const fmt = n => n.toLocaleString("sk-SK").replace(/ /g, " ");
+let maxKm = 70000, sortBy = "price", region = "EU";
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function shot(src, cap, missing){
+  return `<div class="shot"><div class="ph">${missing}</div>${src ? `<img src="${esc(src)}" alt="${esc(cap)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><span class="cap">${cap}</span>` : ''}</div>`;
+}
+function card(c){
+  const under = c.km <= 50000 ? '<span class="chip good">Under 50 000 km</span>' : '';
+  return `<article class="card">
+    <div class="photos" style="position:relative">
+      <span class="plate" title="${esc(c.town)}"><i>${esc(c.cc)}</i><b>${esc(c.plate)}</b></span>
+      ${shot(c.ext, "Exterior", "No photos in this ad")}
+      ${shot(c.sw, "Software screen", "No software screen photo in this ad")}
+    </div>
+    <div class="body">
+      <div class="price">${fmt(c.price)} €</div>
+      <h2 class="name">${esc(c.name)}</h2>
+      <dl>
+        <div><dt>Mileage</dt><dd>${fmt(c.km)} km</dd></div>
+        <div><dt>First reg.</dt><dd>${esc(c.year)}</dd></div>
+        <div><dt>Drive</dt><dd>AWD</dd></div>
+      </dl>
+      <div class="cost">
+        <div class="row"><span>Price</span><span>${fmt(c.price)} €</span></div>
+        ${c.region === "SK" ? `<div class="row"><span>Ownership transfer</span><span>+ ${fmt(fee(c))} €</span></div>` : `<div class="row"><span>Slovak registration & fees</span><span>+ ${fmt(fee(c))} €</span></div>
+        <div class="row"><span>Transport to Bratislava (${esc(c.dist)}, carrier)</span><span>+ ${fmt(c.tr)} €</span></div>
+        ${c.vat ? `<div class="row"><span>Slovak VAT, net change</span><span>+ ${fmt(c.vat)} €</span></div>` : `<div class="row"><span>Slovak VAT</span><span>0 €</span></div>`}`}
+        <div class="row total"><span>Estimated total</span><span>${fmt(total(c))} €</span></div>
+        ${c.vatWorst ? `<div class="vnote">If no VAT invoice: ${fmt(c.price + fee(c) + c.tr + c.vatWorst)} €</div>` : ''}
+        ${c.vatNote ? `<div class="vnote">${esc(c.vatNote)}</div>` : ''}
+      </div>
+      <div class="chips">${under}${c.chips.map(([t,k]) => `<span class="chip ${k}">${esc(t)}</span>`).join("")}</div>
+      <ul class="facts">${c.facts.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
+      <div class="foot"><span class="seller">${esc(c.town)} · ${esc(c.seller)}</span><a class="link" href="${esc(c.url)}" target="_blank" rel="noopener">Open ad →</a></div>
+    </div>
+  </article>`;
+}
+function render(){
+  const pool = cars.filter(c => region === "EU" ? c.region !== "SK" : c.region === "SK");
+  const list = pool.filter(c => c.km <= maxKm).sort((a,b) => sortBy === "price" ? a.price - b.price : sortBy === "total" ? total(a) - total(b) : a.km - b.km);
+  document.getElementById("grid").innerHTML = (region === "SK" ? '<p class="empty">No Slovak AWD Juniper is listed under 55 000 € today. These are the closest, just over your cap; there is no import, transport or VAT cost on top.</p>' : '') + (list.length ? list.map(card).join("") : '<p class="empty">No listings match.</p>');
+  const under50 = pool.filter(c => c.km <= 50000).length;
+  document.getElementById("stats").innerHTML =
+    `<div class="stat"><b>${region === "SK" ? 0 : pool.length}</b><span>Matching cars</span></div>
+     <div class="stat"><b>${under50}</b><span>Under 50 000 km</span></div>
+     <div class="stat"><b>${fmt(Math.min(...pool.map(total)))} €</b><span>Cheapest total</span></div>
+     <div class="stat"><b>0</b><span>FSD purchased</span></div>`;
+}
+function seg(id, key, apply){
+  const g = document.getElementById(id);
+  g.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    g.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
+    apply(b.dataset[key]); render();
+  });
+}
+seg("f-region", "region", v => region = v);
+seg("f-km", "km", v => maxKm = +v);
+seg("f-sort", "sort", v => sortBy = v);
+render();
+</script>
+</body>
+</html>
