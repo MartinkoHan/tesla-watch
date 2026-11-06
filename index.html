@@ -108,7 +108,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   <header>
     <div class="eyebrow">Used-car check · 6 Nov 2026 · SK · CZ · AT · DE</div>
     <h1>Tesla Model Y AWD with HW4 for sale</h1>
-    <p class="criteria">All-wheel drive (Long Range or Performance) with the HW4 / AI4 computer: every Juniper (2025+), plus 2024 cars built after the HW4 switch. Up to 70 000 km and 55 000 €. Austria, Germany, Czechia and Slovakia.</p>
+    <p class="criteria">All-wheel drive (Long Range or Performance) with the HW4 / AI4 computer: every Juniper (2025+), plus 2024 cars built after the HW4 switch. Up to 70 000 km and 55 000 €, no damaged cars. Austria, Germany, Czechia and Slovakia.</p>
     <div class="seg region" role="group" id="f-region" aria-label="Where">
       <button type="button" data-region="EU" aria-pressed="true">EU: Austria, Germany &amp; Czechia</button>
       <button type="button" data-region="SK" aria-pressed="false">Slovakia only</button>
@@ -144,6 +144,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   <main class="grid" id="grid"></main>
 
   <footer>
+    <span>Left out because of damage: Neu-Ulm, DE (46 900 €, dented rear panel) and a damaged 6/2025 Performance in Prague.</span>
     <span>Sold or removed since this morning: Stuttgart (44 900 €), Engerwitzdorf (52 450 €) and Solingen (53 500 €).</span>
     <span>Also checked: DriveTesla.sk (two Junipers, both reserved, 56 490 € and 58 190 €), AAA Auto SK and CZ (no 2024+ AWD under the limits). Not readable: Sauto.cz, mobile.de, Tesla used inventory; TipCars only partly.</span>
     <span>Photos load from AutoScout24. Data is as stated by sellers; check the VIN history before buying.</span>
@@ -214,12 +215,6 @@ const cars = [
     url:"https://www.autobazar.eu/en/detail/tesla-model-y-2026-long-range-awd-servis-5-rocna-zaruka/Am-tbUxNs_W/",
     chips:[["Juniper (2026)","good"],["FSD not listed","warn"],["1 890 € over cap","warn"]],
     facts:["Factory warranty to 03/2030","On the lot from 16 Nov 2026"] },
-  { name:"Model Y Premium Long Range Dual AWD", price:46900, year:"9/2025", km:40852, tr:550, dist:"~650 km", vat:0, cc:"D", plate:"NU", town:"Neu-Ulm, DE", seller:"Özcelik GmbH (dealer)",
-    ext:P("3693df04-82a2-4195-912d-a6fc3bec0215_fdfe3ed3-7fbb-4281-a1f3-e85e02b087c8"),
-    sw:P("3693df04-82a2-4195-912d-a6fc3bec0215_5fcfe64a-ceab-4f55-abd4-4e86a4de0ae8"),
-    url:AD("3693df04-82a2-4195-912d-a6fc3bec0215"),
-    chips:[["Juniper","good"],["HW4 confirmed","good"],["Basic Autopilot","warn"],["Damage visible","bad"]],
-    facts:["One ad photo shows a dented rear quarter panel next to the left tail light","Screen photo: AI4 computer, basic Autopilot"] },
   { name:"Model Y Premium Long Range Dual Motor AWD", price:47990, year:"8/2026", km:2550, tr:800, dist:"~1 150 km", vat:Math.round(47990/1.19*0.23)-Math.round(47990-47990/1.19), vatNote:"New vehicle for tax (under 6 months / 6 000 km): dealer invoices without German VAT, you pay 23 % Slovak VAT", cc:"D", plate:"BM", town:"Bedburg, DE", seller:"Dealer",
     ext:P("6df1b8fc-a4c6-4073-847d-b81a15556ece_753fc79a-cc36-4b8d-9ac4-cd003c7e530d"), sw:null,
     url:AD("6df1b8fc-a4c6-4073-847d-b81a15556ece"),
