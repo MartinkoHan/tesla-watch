@@ -191,7 +191,7 @@ const cars = [
     chips:[["Pre-Juniper (2024)","warn"],["HW4 confirmed","good"],["Basic Autopilot","warn"]],
     facts:["Screen photo shows the AI4 computer","Almost new: 2 300 km"] },
   { name:"Model Y Juniper Premium Long Range AWD", price:49240, year:"6/2025", km:70000, cc:"CZ", plate:"Z", town:"Zlín, CZ", seller:"Private seller (Bazoš.cz)", tr:300, dist:"~170 km", vat:0,
-    ext:"https://www.bazos.cz/img/1/479/224608479.jpg", sw:null,
+    ext:null, extMissing:"Bazoš.cz doesn't allow its photos elsewhere. Open the ad to see them", sw:null,
     url:"https://auto.bazos.cz/inzerat/224608479/tesla-model-y-juniper-premium-long-range-all-wheel-drive.php",
     chips:[["Juniper","good"],["FSD not listed","warn"],["At 70 000 km limit","warn"]],
     facts:["1 199 000 Kč (≈ 24.35 Kč/€); VAT deductible","Warranty to 6/2029 or 80 000 km; Deep Blue, black interior"] },
@@ -267,7 +267,7 @@ function card(c){
   return `<article class="card">
     <div class="photos" style="position:relative">
       <span class="plate" title="${esc(c.town)}"><i>${esc(c.cc)}</i><b>${esc(c.plate)}</b></span>
-      ${shot(c.ext, "Exterior", "No photos in this ad")}
+      ${shot(c.ext, "Exterior", c.extMissing || "No photos in this ad")}
       ${shot(c.sw, "Software screen", "No software screen photo in this ad")}
     </div>
     <div class="body">
