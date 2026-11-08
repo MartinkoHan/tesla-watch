@@ -144,8 +144,8 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   <main class="grid" id="grid"></main>
 
   <footer>
-    <span>Left out because of damage: a damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč). Also left out: four 2025 cars from one dealer in Aken (Elbe), DE, at 23 000–28 000 € (about half the usual price, no description: likely fake ads), an exdrazby.cz auction Juniper, and US imports.</span>
-    <span>Sold or removed since 6 Nov: LUXURIUS MOTORS, Slovakia (55 900 €, Juniper over the cap).</span>
+    <span>Left out because of damage: a damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč). Also left out: a 2025 AWD in Praha (950 000 Kč, Bazoš.cz) that looks like a US import (its photos are taken at Boss Auto, the US-import dealer), four 2025 cars from one dealer in Aken (Elbe), DE, at 23 000–28 000 € (about half the usual price, no description: likely fake ads), an exdrazby.cz auction Juniper, and US imports.</span>
+    <span>Sold or removed since 6 Nov: LUXURIUS MOTORS, Slovakia (55 900 €, Juniper over the cap), and the Praha 2025 AWD listed this morning (removed as a likely US import).</span>
     <span>Also checked: DriveTesla.sk (two Junipers, both reserved, 56 490 € and 58 190 €), AAA Auto SK and CZ and the 2024 AWD cars on Autobazar.eu (VINs from before the HW4 switch), Bazoš.sk (only cars from before 8/2024). Bazoš photos couldn't be checked for damage today. Not checked: Sauto.cz, mobile.de, Tesla used inventory, TipCars.</span>
     <span>Photos load from AutoScout24. Data is as stated by sellers; check the VIN history before buying.</span>
   </footer>
@@ -155,11 +155,6 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 const P = id => "https://prod.pictures.autoscout24.net/listing-images/" + id + ".jpg/720x540.webp";
 const AD = g => "https://www.autoscout24.de/angebote/" + g;
 const cars = [
-  { name:"Model Y AWD (2025)", price:39014, year:"2025", km:20000, cc:"CZ", plate:"P", town:"Praha, CZ", seller:"Private seller (Bazoš.cz)", tr:350, dist:"~330 km", vat:0,
-    ext:null, extMissing:"Bazoš.cz doesn't allow its photos elsewhere. Open the ad to see them", sw:null,
-    url:"https://auto.bazos.cz/inzerat/225708001/tesla-model-y-2025.php",
-    chips:[["2025 (HW4)","good"],["Few details in ad","warn"],["Well below similar cars","warn"]],
-    facts:["950 000 Kč (≈ 24.35 Kč/€); 20 000 km, STK to 9/2028","Ad gives no month, version, VIN or history: ask for the VIN and a Cebia report before going"] },
   { name:"Model Y Long Range AWD 79 kWh", price:39990, year:"8/2024", km:40000, cc:"A", plate:"G", town:"Graz, AT", seller:"Private seller", tr:300, dist:"~200 km", vat:0,
     ext:P("6b666b1e-51cd-465e-9d89-b1bef5d44413_6c7f3128-3b9a-4b70-bb1f-b4b7e71b980e"), sw:null,
     url:AD("6b666b1e-51cd-465e-9d89-b1bef5d44413"),
@@ -184,7 +179,7 @@ const cars = [
     ext:null, extMissing:"Bazoš.cz doesn't allow its photos elsewhere. Open the ad to see them", sw:null,
     url:"https://auto.bazos.cz/inzerat/224540526/tesla-model-y-performance-393-kw-2025-kuze.php",
     chips:[["Pre-Juniper (2024)","warn"],["HW4 likely","good"],["FSD not listed","warn"]],
-    facts:["1 049 900 Kč (≈ 24.35 Kč/€); Czech car, 1st owner, full service history","Cebia report and paint-thickness measurement available; Tesla warranty to 7/2027"] },
+    facts:["1 049 900 Kč (≈ 24.35 Kč/€); Czech car, 1st owner, full service history","Cebia report and paint-thickness measurement available; Tesla warranty to 7/2027","Photos checked on 8 Nov: no visible damage"] },
   { name:"Model Y Performance AWD, Quicksilver", price:43500, year:"9/2024", km:39900, cc:"A", plate:"FK", town:"Feldkirch, AT", seller:"Private seller", tr:350, dist:"~720 km", vat:0,
     ext:P("5aff4897-4ba2-47f3-9929-c1bfe236461f_74d5e2be-0354-4129-82f5-8a5f8be291f0"), sw:null,
     url:AD("5aff4897-4ba2-47f3-9929-c1bfe236461f"),
