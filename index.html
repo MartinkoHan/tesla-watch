@@ -106,7 +106,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Used-car check · 6 Nov 2026 · SK · CZ · AT · DE</div>
+    <div class="eyebrow">Used-car check · 8 Nov 2026 · SK · CZ · AT · DE</div>
     <h1>Tesla Model Y AWD with HW4 for sale</h1>
     <p class="criteria">All-wheel drive (Long Range or Performance) with the HW4 / AI4 computer: every Juniper (2025+), plus 2024 cars built after the HW4 switch. Up to 70 000 km and 55 000 €, no damaged cars. Austria, Germany, Czechia and Slovakia.</p>
     <div class="seg region" role="group" id="f-region" aria-label="Where">
@@ -124,7 +124,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 
   <section class="note" aria-label="Import costs">
     <p><strong>Import costs (estimates):</strong> about 400 € in Slovak fees per car: registration fee 33 € for an electric car, originality check ~100 €, approval at the district office 100 €, plates ~55 €, recycling fee 30–50 €, document translation ~60 €. No technical inspection is needed for cars under 4 years old. Transport uses typical carrier prices; driving it home yourself on temporary plates is usually cheaper.</p>
-    <p><strong>VAT:</strong> used cars bought at the listed gross price owe no further VAT. A car under 6 months old <em>or</em> under 6 000 km counts as a new vehicle for tax, and you pay 23 % Slovak VAT on it. That affects Bedburg, Baden and Seitenstetten. I'm not a tax advisor, so confirm with your tax office before buying one of those.</p>
+    <p><strong>VAT:</strong> used cars bought at the listed gross price owe no further VAT. A car under 6 months old <em>or</em> under 6 000 km counts as a new vehicle for tax, and you pay 23 % Slovak VAT on it. That affects Osnabrück, Bedburg, Baden and Seitenstetten. I'm not a tax advisor, so confirm with your tax office before buying one of those.</p>
   </section>
 
   <div class="controls">
@@ -144,9 +144,9 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   <main class="grid" id="grid"></main>
 
   <footer>
-    <span>Left out because of damage: Neu-Ulm, DE (46 900 €, dented rear panel) and a damaged 6/2025 Performance in Prague.</span>
-    <span>Sold or removed since this morning: Stuttgart (44 900 €), Engerwitzdorf (52 450 €) and Solingen (53 500 €).</span>
-    <span>Also checked: DriveTesla.sk (two Junipers, both reserved, 56 490 € and 58 190 €), AAA Auto SK and CZ (no 2024+ AWD under the limits). Not readable: Sauto.cz, mobile.de, Tesla used inventory; TipCars only partly.</span>
+    <span>Left out because of damage: a damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč). Also left out: four 2025 cars from one dealer in Aken (Elbe), DE, at 23 000–28 000 € (about half the usual price, no description: likely fake ads), an exdrazby.cz auction Juniper, and US imports.</span>
+    <span>Sold or removed since 6 Nov: LUXURIUS MOTORS, Slovakia (55 900 €, Juniper over the cap).</span>
+    <span>Also checked: DriveTesla.sk (two Junipers, both reserved, 56 490 € and 58 190 €), AAA Auto SK and CZ and the 2024 AWD cars on Autobazar.eu (VINs from before the HW4 switch), Bazoš.sk (only cars from before 8/2024). Bazoš photos couldn't be checked for damage today. Not checked: Sauto.cz, mobile.de, Tesla used inventory, TipCars.</span>
     <span>Photos load from AutoScout24. Data is as stated by sellers; check the VIN history before buying.</span>
   </footer>
 </div>
@@ -155,6 +155,11 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 const P = id => "https://prod.pictures.autoscout24.net/listing-images/" + id + ".jpg/720x540.webp";
 const AD = g => "https://www.autoscout24.de/angebote/" + g;
 const cars = [
+  { name:"Model Y AWD (2025)", price:39014, year:"2025", km:20000, cc:"CZ", plate:"P", town:"Praha, CZ", seller:"Private seller (Bazoš.cz)", tr:350, dist:"~330 km", vat:0,
+    ext:null, extMissing:"Bazoš.cz doesn't allow its photos elsewhere. Open the ad to see them", sw:null,
+    url:"https://auto.bazos.cz/inzerat/225708001/tesla-model-y-2025.php",
+    chips:[["2025 (HW4)","good"],["Few details in ad","warn"],["Well below similar cars","warn"]],
+    facts:["950 000 Kč (≈ 24.35 Kč/€); 20 000 km, STK to 9/2028","Ad gives no month, version, VIN or history: ask for the VIN and a Cebia report before going"] },
   { name:"Model Y Long Range AWD 79 kWh", price:39990, year:"8/2024", km:40000, cc:"A", plate:"G", town:"Graz, AT", seller:"Private seller", tr:300, dist:"~200 km", vat:0,
     ext:P("6b666b1e-51cd-465e-9d89-b1bef5d44413_6c7f3128-3b9a-4b70-bb1f-b4b7e71b980e"), sw:null,
     url:AD("6b666b1e-51cd-465e-9d89-b1bef5d44413"),
@@ -175,31 +180,37 @@ const cars = [
     url:AD("f2d66152-9319-477a-b8c1-20c055f12bd4"),
     chips:[["Pre-Juniper (2024)","warn"],["HW4 unconfirmed","warn"]],
     facts:["White interior; lease takeover at 1.49 % possible","Registered 8/2024, right at the HW4 changeover"] },
+  { name:"Model Y Performance Dual Motor AWD", price:43117, year:"12/2024", km:36970, cc:"CZ", plate:"A", town:"Praha, CZ", seller:"Prodej mi Káru (dealer, Bazoš.cz)", tr:350, dist:"~330 km", vat:0,
+    ext:null, extMissing:"Bazoš.cz doesn't allow its photos elsewhere. Open the ad to see them", sw:null,
+    url:"https://auto.bazos.cz/inzerat/224540526/tesla-model-y-performance-393-kw-2025-kuze.php",
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 likely","good"],["FSD not listed","warn"]],
+    facts:["1 049 900 Kč (≈ 24.35 Kč/€); Czech car, 1st owner, full service history","Cebia report and paint-thickness measurement available; Tesla warranty to 7/2027"] },
   { name:"Model Y Performance AWD, Quicksilver", price:43500, year:"9/2024", km:39900, cc:"A", plate:"FK", town:"Feldkirch, AT", seller:"Private seller", tr:350, dist:"~720 km", vat:0,
     ext:P("5aff4897-4ba2-47f3-9929-c1bfe236461f_74d5e2be-0354-4129-82f5-8a5f8be291f0"), sw:null,
     url:AD("5aff4897-4ba2-47f3-9929-c1bfe236461f"),
     chips:[["Pre-Juniper (2024)","warn"],["HW4 unconfirmed","warn"]],
     facts:["Tow bar, summer and winter wheels"] },
+  { name:"Model Y Long Range Dual AWD", price:43700, year:"10/2024", km:28500, cc:"D", plate:"HAM", town:"Hamm, DE", seller:"Car Friends (dealer)", tr:850, dist:"~1 050 km", vat:0,
+    ext:P("0a6580b2-460c-4300-81c5-fe3efe0765f5_1d193098-defb-45f9-aea2-c4d474638ac6"), sw:null,
+    url:AD("0a6580b2-460c-4300-81c5-fe3efe0765f5"),
+    chips:[["Pre-Juniper (2024)","warn"],["HW4 likely","good"],["FSD not listed","warn"]],
+    facts:["Registered 10/2024, after Berlin's switch to HW4; still ask for Controls › Software","Pearl white, black interior, full service history, no accidents listed"] },
   { name:"Model Y Long Range Dual Motor AWD, Quicksilver", price:43900, year:"11/2024", km:50000, cc:"A", plate:"IL", town:"Stams, AT", seller:"Private seller", tr:350, dist:"~580 km", vat:0,
     ext:P("e20b28d0-36c8-4022-a838-fcfb1faede22_71c96bd3-1fe9-480f-892a-e6515b0e3156"), sw:null,
     url:AD("e20b28d0-36c8-4022-a838-fcfb1faede22"),
     chips:[["Pre-Juniper (2024)","warn"],["HW4 likely","good"],["Enhanced Autopilot","good"]],
     facts:["Built late 2024 in Berlin, after the switch to HW4; still confirm","Tesla app screenshot shows Enhanced Autopilot; warranty about 2 more years"] },
-  { name:"Model Y Performance Dual Motor AWD", price:48000, year:"12/2024", km:2300, cc:"D", plate:"OS", town:"Osnabrück, DE", seller:"Private seller", tr:850, dist:"~1 150 km", vat:Math.round(48000*0.23), vatNote:"Under 6 000 km counts as a new vehicle for tax: private sale, so 23 % Slovak VAT on the full price",
-    ext:P("182af77d-6307-4f3d-af8d-6319f86bea77_135c2eb1-5247-453f-a30f-9310827eeede"),
-    sw:P("182af77d-6307-4f3d-af8d-6319f86bea77_65a428e8-3d04-4714-9c2e-065819c085a8"),
-    url:AD("182af77d-6307-4f3d-af8d-6319f86bea77"),
+  { name:"Model Y Performance Dual Motor AWD", price:48000, year:"12/2024", km:2400, cc:"D", plate:"OS", town:"Osnabrück, DE", seller:"Private seller", tr:850, dist:"~1 150 km", vat:Math.round(48000*0.23), vatNote:"Under 6 000 km counts as a new vehicle for tax: private sale, so 23 % Slovak VAT on the full price",
+    ext:P("90c2ca90-f921-4fc2-9830-8568eabc1f6e_b663af00-e4a4-4de3-93e5-68e03ee84567"),
+    sw:P("90c2ca90-f921-4fc2-9830-8568eabc1f6e_1be9d5c1-a202-436c-9b5d-9bd0cd662919"),
+    url:AD("90c2ca90-f921-4fc2-9830-8568eabc1f6e"),
     chips:[["Pre-Juniper (2024)","warn"],["HW4 confirmed","good"],["Basic Autopilot","warn"]],
-    facts:["Screen photo shows the AI4 computer","Almost new: 2 300 km"] },
+    facts:["Screen photo shows the AI4 computer","Almost new: 2 400 km; relisted under a new ad on 8 Nov","Winter wheels, tow bar, rear screen with Android/CarPlay retrofit"] },
   { name:"Model Y Juniper Premium Long Range AWD", price:49240, year:"6/2025", km:70000, cc:"CZ", plate:"Z", town:"Zlín, CZ", seller:"Private seller (Bazoš.cz)", tr:300, dist:"~170 km", vat:0,
     ext:null, extMissing:"Bazoš.cz doesn't allow its photos elsewhere. Open the ad to see them", sw:null,
     url:"https://auto.bazos.cz/inzerat/224608479/tesla-model-y-juniper-premium-long-range-all-wheel-drive.php",
     chips:[["Juniper","good"],["FSD not listed","warn"],["At 70 000 km limit","warn"]],
     facts:["1 199 000 Kč (≈ 24.35 Kč/€); VAT deductible","Warranty to 6/2029 or 80 000 km; Deep Blue, black interior"] },
-  { name:"Model Y Dual Motor AWD, white interior", price:55900, year:"4/2025", km:18000, cc:"SK", plate:"SK", town:"Slovakia", seller:"LUXURIUS MOTORS (dealer)", region:"SK", tr:0, dist:"", vat:0, fees:33,
-    ext:null, sw:null, url:"https://www.autobazar.eu/en/detail/tesla-model-y-dual-motor-awd-white-interior-dual-screen-autopilot-top/AmUHItJbcf2/",
-    chips:[["Juniper (rear screen)","good"],["Basic Autopilot","warn"],["900 € over cap","warn"]],
-    facts:["First owner, no accident, under warranty","Ad lists the rear passenger screen, which only Juniper has"] },
   { name:"Model Y Long Range AWD 75 kWh", price:55990, year:"7/2025", km:24000, cc:"SK", plate:"KE", town:"Košice, SK", seller:"Michal (dealer)", region:"SK", tr:0, dist:"", vat:0, fees:33,
     ext:"https://img.autobazar.eu/foto/MTIwMHg5MDAvZmlsdGVyczpxdWFsaXR5KDg1KTpmb3JtYXQoanBnKS9hZXU=/fqmUj-aKu_fss?st=ND84p5j9wExfhyF3wRH6i98nZFKxNmn5P5Nr0Bpj5sQ&ts=1793908388&e=0", sw:null,
     url:"https://www.autobazar.eu/en/detail/tesla-model-y-75kwh-long-range-awd-258kw351hp-a/Ae2y4fQPFDR/",
