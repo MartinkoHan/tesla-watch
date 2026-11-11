@@ -245,7 +245,7 @@
       "title": "Model Y Long Range AWD 75 kWh",
       "version": "Long Range",
       "juniper": true,
-      "price": 55990,
+      "price": 55490,
       "firstReg": "7/2025",
       "km": 24000,
       "country": "SK",
@@ -451,7 +451,8 @@
   "leftOut": [
     "A damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč)",
     "Two US imports in Prague on Bazoš.cz (a 2025 AWD at 950 000 Kč and a 2024 Long Range at 689 000 Kč with a US-built VIN)",
-    "An exdrazby.cz auction Juniper"
+    "An exdrazby.cz auction Juniper",
+    "Four 2025 cars from one dealer in Aken (Elbe), DE, at 23 000–28 000 € (about half the usual price, no description: likely fake ads)"
   ],
   "alsoChecked": [
     "DriveTesla.sk: two Junipers, both reserved (56 490 € and 58 190 €)",
@@ -460,16 +461,11 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 74,
+    "toolCalls": 16,
     "sources": 8,
-    "listingsOpened": 19,
-    "tokensLowK": 350,
-    "tokensHighK": 550
+    "listingsOpened": 1,
+    "tokensLowK": 60,
+    "tokensHighK": 110
   },
-  "removed": [
-    {
-      "id": "galanta-3-2026",
-      "reason": "Price went up from 56 890 € to 58 190 €, above the 57 000 € limit for Slovak near-misses."
-    }
-  ]
+  "removed": []
 }
