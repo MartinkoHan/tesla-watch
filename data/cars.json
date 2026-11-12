@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -461,11 +461,11 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 16,
+    "toolCalls": 9,
     "sources": 8,
-    "listingsOpened": 1,
-    "tokensLowK": 60,
-    "tokensHighK": 110
+    "listingsOpened": 0,
+    "tokensLowK": 25,
+    "tokensHighK": 45
   },
   "removed": []
 }
