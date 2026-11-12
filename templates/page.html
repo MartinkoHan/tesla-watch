@@ -158,7 +158,7 @@ details.sum summary { cursor: pointer; padding: 12px 14px; font-weight: 500; min
     <details><summary>How the total in Slovakia is estimated</summary><div class="in">
       <p>Imported cars: about 400 € in Slovak fees (registration 33 € for an electric car, originality check about 100 €, district office approval 100 €, plates about 55 €, recycling fee 30–50 €, document translation about 60 €), plus a typical carrier price to Bratislava. Driving the car home yourself on temporary plates is usually cheaper. No technical inspection is needed for cars under 4 years old.</p>
       <p>Slovak cars: only the 33 € ownership transfer.</p>
-      <p>VAT: a used car bought at the listed gross price owes no further VAT. A car under 6 months old or under 6 000 km counts as a new vehicle for tax, and 23 % Slovak VAT is due on it. <span id="vatcars"></span> This is not tax advice, so confirm with the tax office before buying one of those.</p>
+      <p>VAT: a used car bought at the listed gross price owes no further VAT. A car under 6 months old or under 6 000 km counts as a new vehicle for tax, and 23 % Slovak VAT is due on it. In return the foreign VAT should come off the price: a dealer invoices without it, and a private seller can reclaim it from their own tax office after the sale, so ask them to deduct it. For private sales the total shows the worst case, with no deduction. <span id="vatcars"></span> This is not tax advice, so confirm with the tax office before buying one of those.</p>
     </div></details>
     <details><summary>How HW4 and FSD are judged</summary><div class="in">
       <p>FSD was approved in Slovakia on 16 Oct 2026 (in Europe it is called Tesla Assisted Driving). It needs the HW4 computer, also called AI4. Every Juniper has it.</p>
@@ -219,7 +219,7 @@ function card(c) {
   return `<article class="card" id="${c.id}">${photo}<div class="body">
     <div><h3>${esc(c.town)}, ${c.countryName}</h3><p class="ver">${esc(c.title)}</p></div>
     <div class="total"><span class="amt">${eur(c.total)}<small>total in Slovakia</small></span>
-      <span class="ad">Ad price ${c.priceWas ? `<s>${eur(c.priceWas.price)}</s>` : ""}${eur(c.price)}${c.totalWorst ? `. Up to ${eur(c.totalWorst)} without a VAT invoice` : ""}</span></div>
+      <span class="ad">Ad price ${c.priceWas ? `<s>${eur(c.priceWas.price)}</s>` : ""}${eur(c.price)}${c.totalWorst ? `. Up to ${eur(c.totalWorst)} without a VAT invoice` : ""}${c.totalBest ? `. About ${eur(c.totalBest)} if the seller deducts the local VAT` : ""}</span></div>
     <dl class="specs"><div><dt>First registered</dt><dd>${c.firstReg}</dd></div><div><dt>Mileage</dt><dd>${num(c.km)}\u00a0km</dd></div><div><dt>${imported ? "Distance" : "Location"}</dt><dd>${imported ? num(c.distanceKm) + "\u00a0km" : "Slovakia"}</dd></div></dl>
     <div class="badges">${badges.map(([t, k]) => `<span class="badge ${k}">${esc(t)}</span>`).join("")}</div>
     ${c.notes.length ? `<ul class="notes">${c.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}

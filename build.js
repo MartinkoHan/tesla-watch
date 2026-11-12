@@ -49,7 +49,7 @@ function derive(c, updated) {
   o.fees = c.country === "SK" ? 33 : 400;
   o.transport = transport(c);
   o.newForTax = c.country !== "SK" && (ageMonths < 6 || c.km < 6000);
-  o.vat = 0; o.vatWorst = null; o.vatNote = null;
+  o.vat = 0; o.vatWorst = null; o.vatBest = null; o.vatNote = null;
   if (o.newForTax) {
     const r = VAT_HOME[c.country];
     const viaInvoice = Math.round(c.price / r * 0.23 - (c.price - c.price / r));
@@ -62,12 +62,13 @@ function derive(c, updated) {
       o.vat = viaInvoice; o.vatWorst = privately;
       o.vatNote = `Counts as a new vehicle for tax (${why}). Assumes the seller invoices without local VAT. If it is a true private sale, Slovak VAT is 23 % of the full price.`;
     } else {
-      o.vat = privately;
-      o.vatNote = `Counts as a new vehicle for tax (${why}). Private sale, so 23 % Slovak VAT is due on the full price.`;
+      o.vat = privately; o.vatBest = viaInvoice;
+      o.vatNote = `Counts as a new vehicle for tax (${why}). Worst case shown: 23 % Slovak VAT on the full asking price. A private seller may reclaim the local VAT after selling abroad; if they take it off the price, the extra cost falls to about ${eur(viaInvoice)}. Agree this with the seller before buying.`;
     }
   }
   o.total = c.price + o.fees + o.transport + o.vat;
   o.totalWorst = o.vatWorst ? c.price + o.fees + o.transport + o.vatWorst : null;
+  o.totalBest = o.vatBest != null ? c.price + o.fees + o.transport + o.vatBest : null;
   o.overCap = Math.max(0, c.price - CAP);
   [o.hw4Label, o.hw4Tone] = HW4[c.hw4];
   [o.apLabel, o.apTone] = AUTOPILOT[c.autopilot] || ["FSD not mentioned", "plain"];
