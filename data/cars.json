@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -402,7 +402,7 @@
       "title": "Model Y Long Range Dual AWD",
       "version": "Long Range",
       "juniper": true,
-      "price": 54980,
+      "price": 54490,
       "firstReg": "7/2025",
       "km": 17002,
       "country": "AT",
@@ -418,7 +418,11 @@
       "notes": [
         "Grey; screen photos show the car menus but not the Software tab"
       ],
-      "firstSeen": null
+      "firstSeen": null,
+      "priceWas": {
+        "price": 54980,
+        "until": "2026-11-12"
+      }
     },
     {
       "id": "seitenstetten-1-2026",
@@ -446,26 +450,53 @@
       ],
       "firstSeen": null,
       "photoNote": "No photos in this ad"
+    },
+    {
+      "id": "stams-11-2024",
+      "url": "https://www.autoscout24.de/angebote/e20b28d0-36c8-4022-a838-fcfb1faede22",
+      "source": "autoscout24",
+      "title": "Model Y Long Range Dual Motor AWD",
+      "version": "Long Range",
+      "juniper": false,
+      "price": 43000,
+      "firstReg": "11/2024",
+      "km": 50000,
+      "country": "AT",
+      "town": "Stams",
+      "plate": "IL",
+      "seller": "Private seller",
+      "sellerType": "private",
+      "vatInvoice": true,
+      "distanceKm": 580,
+      "hw4": "seller",
+      "autopilot": "enhanced",
+      "photo": "https://prod.pictures.autoscout24.net/listing-images/e20b28d0-36c8-4022-a838-fcfb1faede22_71c96bd3-1fe9-480f-892a-e6515b0e3156.jpg/720x540.webp",
+      "swPhoto": null,
+      "notes": [
+        "Quicksilver with white leather, S3XY LED strip, summer and winter wheels, 7 m charging cable",
+        "The ad text says about 48 500 km; the listing says 50 000 km",
+        "It was gone on 11 Nov and is back online at a lower price (was 43 900 €)"
+      ],
+      "firstSeen": "2026-11-13"
     }
   ],
   "leftOut": [
     "A damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč)",
-    "Two US imports in Prague on Bazoš.cz (a 2025 AWD at 950 000 Kč and a 2024 Long Range at 689 000 Kč with a US-built VIN)",
-    "An exdrazby.cz auction Juniper",
-    "Four 2025 cars from one dealer in Aken (Elbe), DE, at 23 000–28 000 € (about half the usual price, no description: likely fake ads)"
+    "A US import in Prague on Bazoš.cz (a 2024 Long Range at 689 000 Kč with a US-built VIN and Ukrainian plates)",
+    "An exdrazby.cz auction Juniper"
   ],
   "alsoChecked": [
-    "DriveTesla.sk: two Junipers, both reserved (56 490 € and 58 190 €)",
+    "DriveTesla.sk: one Juniper, reserved (56 490 €); the 58 190 € Juniper is gone",
     "AAA Auto SK and CZ, and the 2024 AWD cars on Autobazar.eu: VINs from before the HW4 switch",
     "Bazoš.sk: only cars from before 8/2024"
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 9,
+    "toolCalls": 16,
     "sources": 8,
-    "listingsOpened": 0,
-    "tokensLowK": 25,
-    "tokensHighK": 45
+    "listingsOpened": 1,
+    "tokensLowK": 45,
+    "tokensHighK": 80
   },
   "removed": []
 }
