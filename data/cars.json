@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -478,12 +478,39 @@
         "It was gone on 11 Nov and is back online at a lower price (was 43 900 €)"
       ],
       "firstSeen": "2026-11-13"
+    },
+    {
+      "id": "bedburg-9-2026",
+      "url": "https://www.autoscout24.de/angebote/733262e0-1594-4257-8401-761a8ae69d15",
+      "source": "autoscout24",
+      "title": "Model Y Performance AWD",
+      "version": "Performance",
+      "juniper": true,
+      "price": 46500,
+      "firstReg": "9/2026",
+      "km": 1200,
+      "country": "DE",
+      "town": "Bedburg",
+      "plate": "BM",
+      "seller": "Premiumfahrzeuge Klose (dealer)",
+      "sellerType": "dealer",
+      "distanceKm": 1150,
+      "hw4": "juniper",
+      "autopilot": null,
+      "photo": "https://prod.pictures.autoscout24.net/listing-images/733262e0-1594-4257-8401-761a8ae69d15_77ee0fba-f68f-41c5-99bf-ea0b0f9a5c54.jpg/720x540.webp",
+      "swPhoto": null,
+      "notes": [
+        "White, first registered 9/2026 with only 1 200 km",
+        "The ad has two photos and no description: ask for the VIN and the Software screen"
+      ],
+      "firstSeen": "2026-11-14"
     }
   ],
   "leftOut": [
     "A damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč)",
     "A US import in Prague on Bazoš.cz (a 2024 Long Range at 689 000 Kč with a US-built VIN and Ukrainian plates)",
-    "An exdrazby.cz auction Juniper"
+    "An exdrazby.cz auction Juniper",
+    "A Long Range from 11/2024 in Rhauderfehn, DE (40 299 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)"
   ],
   "alsoChecked": [
     "DriveTesla.sk: one Juniper, reserved (56 490 €); the 58 190 € Juniper is gone",
@@ -492,11 +519,11 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 16,
+    "toolCalls": 24,
     "sources": 8,
-    "listingsOpened": 1,
-    "tokensLowK": 45,
-    "tokensHighK": 80
+    "listingsOpened": 2,
+    "tokensLowK": 70,
+    "tokensHighK": 120
   },
   "removed": []
 }
