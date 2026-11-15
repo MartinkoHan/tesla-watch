@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -504,26 +504,82 @@
         "The ad has two photos and no description: ask for the VIN and the Software screen"
       ],
       "firstSeen": "2026-11-14"
+    },
+    {
+      "id": "arbing-9-2024",
+      "url": "https://www.autoscout24.de/angebote/a2dcdef9-d50c-418e-9fb8-df564b11b87b",
+      "source": "autoscout24",
+      "title": "Model Y Long Range Dual Motor AWD, tow bar",
+      "version": "Long Range",
+      "juniper": false,
+      "price": 42997,
+      "firstReg": "9/2024",
+      "km": 25000,
+      "country": "AT",
+      "town": "Arbing",
+      "plate": "PE",
+      "seller": "K & C Automobil GmbH (dealer)",
+      "sellerType": "dealer",
+      "distanceKm": 250,
+      "hw4": "unconfirmed",
+      "autopilot": null,
+      "photo": null,
+      "photoNote": "The dealer's ad only has placeholder pictures so far",
+      "swPhoto": null,
+      "notes": [
+        "Blue, first owner, not an import (Austrian first delivery), tow bar",
+        "Registered 9/2024, right at the HW4 changeover: ask for a photo of Controls › Software"
+      ],
+      "firstSeen": "2026-11-15"
+    },
+    {
+      "id": "nove-mesto-nad-vahom-1-2026",
+      "url": "https://auto.bazos.sk/inzerat/197515381/tesla-model-y-dualmotor-awd-premium-juniper-2026-tazne.php",
+      "source": "bazos.sk",
+      "title": "Model Y Dual Motor AWD Premium, tow bar",
+      "version": "Long Range",
+      "juniper": true,
+      "price": 52620,
+      "firstReg": "1/2026",
+      "km": 11500,
+      "country": "SK",
+      "town": "Nové Mesto nad Váhom",
+      "plate": "NM",
+      "seller": "Private seller (Bazoš.sk)",
+      "sellerType": "private",
+      "distanceKm": 0,
+      "hw4": "juniper",
+      "autopilot": "basic",
+      "photo": null,
+      "photoNote": "Bazoš.sk doesn't allow its photos elsewhere. Open the ad to see them",
+      "swPhoto": null,
+      "notes": [
+        "Stealth Grey, factory tow bar, 19-inch wheels, 82 kWh battery",
+        "Seller says HW4, with a free FSD trial until 1 Dec, then a monthly subscription",
+        "The ad says no damage inside or out; its photos could not be checked today"
+      ],
+      "firstSeen": "2026-11-15"
     }
   ],
   "leftOut": [
     "A damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč)",
     "A US import in Prague on Bazoš.cz (a 2024 Long Range at 689 000 Kč with a US-built VIN and Ukrainian plates)",
     "An exdrazby.cz auction Juniper",
-    "A Long Range from 11/2024 in Rhauderfehn, DE (40 299 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)"
+    "A Long Range from 11/2024 in Rhauderfehn, DE (40 299 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)",
+    "Four 2025 cars from one dealer in Straubing, DE, at 23 500–28 000 € (about half the usual price, no description: likely fake ads)"
   ],
   "alsoChecked": [
     "DriveTesla.sk: one Juniper, reserved (56 490 €); the 58 190 € Juniper is gone",
     "AAA Auto SK and CZ, and the 2024 AWD cars on Autobazar.eu: VINs from before the HW4 switch",
-    "Bazoš.sk: only cars from before 8/2024"
+    "Bazoš.sk: apart from the new Juniper, only cars from before 8/2024"
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 24,
+    "toolCalls": 28,
     "sources": 8,
     "listingsOpened": 2,
-    "tokensLowK": 70,
-    "tokensHighK": 120
+    "tokensLowK": 90,
+    "tokensHighK": 150
   },
   "removed": []
 }
