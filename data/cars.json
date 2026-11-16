@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -245,7 +245,7 @@
       "title": "Model Y Long Range AWD 75 kWh",
       "version": "Long Range",
       "juniper": true,
-      "price": 55490,
+      "price": 54990,
       "firstReg": "7/2025",
       "km": 24000,
       "country": "SK",
@@ -262,7 +262,11 @@
         "First owner, full service history, under warranty",
         "45 520 € if you can deduct VAT"
       ],
-      "firstSeen": null
+      "firstSeen": null,
+      "priceWas": {
+        "price": 55490,
+        "until": "2026-11-15"
+      }
     },
     {
       "id": "galanta-6-2025",
@@ -531,34 +535,6 @@
         "Registered 9/2024, right at the HW4 changeover: ask for a photo of Controls › Software"
       ],
       "firstSeen": "2026-11-15"
-    },
-    {
-      "id": "nove-mesto-nad-vahom-1-2026",
-      "url": "https://auto.bazos.sk/inzerat/197515381/tesla-model-y-dualmotor-awd-premium-juniper-2026-tazne.php",
-      "source": "bazos.sk",
-      "title": "Model Y Dual Motor AWD Premium, tow bar",
-      "version": "Long Range",
-      "juniper": true,
-      "price": 52620,
-      "firstReg": "1/2026",
-      "km": 11500,
-      "country": "SK",
-      "town": "Nové Mesto nad Váhom",
-      "plate": "NM",
-      "seller": "Private seller (Bazoš.sk)",
-      "sellerType": "private",
-      "distanceKm": 0,
-      "hw4": "juniper",
-      "autopilot": "basic",
-      "photo": null,
-      "photoNote": "Bazoš.sk doesn't allow its photos elsewhere. Open the ad to see them",
-      "swPhoto": null,
-      "notes": [
-        "Stealth Grey, factory tow bar, 19-inch wheels, 82 kWh battery",
-        "Seller says HW4, with a free FSD trial until 1 Dec, then a monthly subscription",
-        "The ad says no damage inside or out; its photos could not be checked today"
-      ],
-      "firstSeen": "2026-11-15"
     }
   ],
   "leftOut": [
@@ -571,15 +547,15 @@
   "alsoChecked": [
     "DriveTesla.sk: one Juniper, reserved (56 490 €); the 58 190 € Juniper is gone",
     "AAA Auto SK and CZ, and the 2024 AWD cars on Autobazar.eu: VINs from before the HW4 switch",
-    "Bazoš.sk: apart from the new Juniper, only cars from before 8/2024"
+    "Bazoš.sk: only RWD cars, Junipers over 57 000 €, or cars from before 8/2024"
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 28,
+    "toolCalls": 26,
     "sources": 8,
     "listingsOpened": 2,
-    "tokensLowK": 90,
-    "tokensHighK": 150
+    "tokensLowK": 70,
+    "tokensHighK": 120
   },
   "removed": []
 }

@@ -1,10 +1,61 @@
 {
-  "date": "2026-11-15",
-  "since": "2026-11-14",
-  "new": [
-    "arbing-9-2024",
-    "nove-mesto-nad-vahom-1-2026"
+  "date": "2026-11-16",
+  "since": "2026-11-15",
+  "new": [],
+  "price": [
+    {
+      "id": "kosice-7-2025",
+      "from": 55490
+    }
   ],
-  "price": [],
-  "sold": []
+  "sold": [
+    {
+      "id": "nove-mesto-nad-vahom-1-2026",
+      "url": "https://auto.bazos.sk/inzerat/197515381/tesla-model-y-dualmotor-awd-premium-juniper-2026-tazne.php",
+      "source": "bazos.sk",
+      "title": "Model Y Dual Motor AWD Premium, tow bar",
+      "version": "Long Range",
+      "juniper": true,
+      "price": 52620,
+      "firstReg": "1/2026",
+      "km": 11500,
+      "country": "SK",
+      "town": "Nové Mesto nad Váhom",
+      "plate": "NM",
+      "seller": "Private seller (Bazoš.sk)",
+      "sellerType": "private",
+      "distanceKm": 0,
+      "hw4": "juniper",
+      "autopilot": "basic",
+      "photo": null,
+      "photoNote": "Bazoš.sk doesn't allow its photos elsewhere. Open the ad to see them",
+      "swPhoto": null,
+      "notes": [
+        "Stealth Grey, factory tow bar, 19-inch wheels, 82 kWh battery",
+        "Seller says HW4, with a free FSD trial until 1 Dec, then a monthly subscription",
+        "The ad says no damage inside or out; its photos could not be checked today"
+      ],
+      "firstSeen": "2026-11-15",
+      "countryName": "Slovakia",
+      "fees": 33,
+      "transport": 0,
+      "newForTax": false,
+      "vat": 0,
+      "vatWorst": null,
+      "vatBest": null,
+      "vatNote": null,
+      "total": 52653,
+      "totalWorst": null,
+      "totalBest": null,
+      "overCap": 0,
+      "hw4Label": "HW4 (every Juniper has it)",
+      "hw4Tone": "good",
+      "apLabel": "Basic Autopilot",
+      "apTone": "warn",
+      "modelLabel": "Juniper",
+      "sellerLabel": "Private seller",
+      "isNew": true,
+      "removedReason": null
+    }
+  ]
 }
