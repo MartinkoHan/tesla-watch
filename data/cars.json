@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -515,33 +515,6 @@
         "The photos are phone screenshots; none shows the Software screen"
       ],
       "firstSeen": "2026-11-17"
-    },
-    {
-      "id": "winden-3-2026",
-      "url": "https://www.autoscout24.de/angebote/45a81ef1-d95a-4b0a-b8ca-4c9f035b4480",
-      "source": "autoscout24",
-      "title": "Model Y Premium Long Range AWD",
-      "version": "Long Range",
-      "juniper": true,
-      "price": 53990,
-      "firstReg": "3/2026",
-      "km": 11300,
-      "country": "AT",
-      "town": "Winden am See",
-      "plate": "ND",
-      "seller": "Hornak Cars GmbH (dealer)",
-      "sellerType": "dealer",
-      "distanceKm": 60,
-      "hw4": "juniper",
-      "autopilot": null,
-      "photo": "https://prod.pictures.autoscout24.net/listing-images/45a81ef1-d95a-4b0a-b8ca-4c9f035b4480_b8fabe98-cf8b-4351-bda1-bd3667856169.jpg/720x540.webp",
-      "swPhoto": null,
-      "notes": [
-        "Black with black interior, 19-inch wheels, Austrian car; VAT can be shown",
-        "The photos are symbolic pictures of a similar car with 20-inch wheels, not this car",
-        "Ask the dealer for real photos and the Software screen"
-      ],
-      "firstSeen": "2026-11-18"
     }
   ],
   "leftOut": [
@@ -549,7 +522,7 @@
     "A US import in Prague on Bazoš.cz (a 2024 Long Range at 689 000 Kč with a US-built VIN and Ukrainian plates)",
     "An exdrazby.cz auction Juniper",
     "A Long Range from 11/2024 in Rhauderfehn, DE (40 299 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)",
-    "Four 2025 cars from one dealer in Straubing, DE, at 23 500–28 000 € (about half the usual price, no description: likely fake ads)"
+    "A reservation for a new Juniper in Bratislava on Autobazar.eu (56 320 €): the car is not built yet, delivery mid-December, and the seller adds a 1 300 € commission"
   ],
   "alsoChecked": [
     "DriveTesla.sk: one Juniper, reserved (56 490 €); the 58 190 € Juniper is gone",
@@ -558,11 +531,11 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 27,
+    "toolCalls": 24,
     "sources": 8,
     "listingsOpened": 2,
-    "tokensLowK": 80,
-    "tokensHighK": 130
+    "tokensLowK": 60,
+    "tokensHighK": 100
   },
   "removed": []
 }

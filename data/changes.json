@@ -1,14 +1,55 @@
 {
-  "date": "2026-11-18",
-  "since": "2026-11-17",
-  "new": [
-    "winden-3-2026"
-  ],
-  "price": [
+  "date": "2026-11-19",
+  "since": "2026-11-18",
+  "new": [],
+  "price": [],
+  "sold": [
     {
-      "id": "baden-6-2026",
-      "from": 54500
+      "id": "winden-3-2026",
+      "url": "https://www.autoscout24.de/angebote/45a81ef1-d95a-4b0a-b8ca-4c9f035b4480",
+      "source": "autoscout24",
+      "title": "Model Y Premium Long Range AWD",
+      "version": "Long Range",
+      "juniper": true,
+      "price": 53990,
+      "firstReg": "3/2026",
+      "km": 11300,
+      "country": "AT",
+      "town": "Winden am See",
+      "plate": "ND",
+      "seller": "Hornak Cars GmbH (dealer)",
+      "sellerType": "dealer",
+      "distanceKm": 60,
+      "hw4": "juniper",
+      "autopilot": null,
+      "photo": "https://prod.pictures.autoscout24.net/listing-images/45a81ef1-d95a-4b0a-b8ca-4c9f035b4480_b8fabe98-cf8b-4351-bda1-bd3667856169.jpg/720x540.webp",
+      "swPhoto": null,
+      "notes": [
+        "Black with black interior, 19-inch wheels, Austrian car; VAT can be shown",
+        "The photos are symbolic pictures of a similar car with 20-inch wheels, not this car",
+        "Ask the dealer for real photos and the Software screen"
+      ],
+      "firstSeen": "2026-11-18",
+      "countryName": "Austria",
+      "fees": 400,
+      "transport": 200,
+      "newForTax": false,
+      "vat": 0,
+      "vatWorst": null,
+      "vatBest": null,
+      "vatNote": null,
+      "total": 54590,
+      "totalWorst": null,
+      "totalBest": null,
+      "overCap": 0,
+      "hw4Label": "HW4 (every Juniper has it)",
+      "hw4Tone": "good",
+      "apLabel": "FSD not mentioned",
+      "apTone": "plain",
+      "modelLabel": "Juniper",
+      "sellerLabel": "Dealer",
+      "isNew": true,
+      "removedReason": null
     }
-  ],
-  "sold": []
+  ]
 }
