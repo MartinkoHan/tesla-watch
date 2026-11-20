@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -525,17 +525,17 @@
     "A reservation for a new Juniper in Bratislava on Autobazar.eu (56 320 €): the car is not built yet, delivery mid-December, and the seller adds a 1 300 € commission"
   ],
   "alsoChecked": [
-    "DriveTesla.sk: one Juniper, reserved (56 490 €); the 58 190 € Juniper is gone",
+    "DriveTesla.sk: no Juniper left (the reserved 56 490 € one is gone)",
     "AAA Auto SK and CZ, and the 2024 AWD cars on Autobazar.eu: VINs from before the HW4 switch",
     "Bazoš.sk: only RWD cars, Junipers over 57 000 €, or cars from before 8/2024"
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 24,
+    "toolCalls": 18,
     "sources": 8,
-    "listingsOpened": 2,
-    "tokensLowK": 60,
-    "tokensHighK": 100
+    "listingsOpened": 3,
+    "tokensLowK": 55,
+    "tokensHighK": 90
   },
   "removed": []
 }
