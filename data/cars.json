@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -165,7 +165,7 @@
       "title": "Model Y Long Range Dual AWD",
       "version": "Long Range",
       "juniper": false,
-      "price": 43700,
+      "price": 42900,
       "firstReg": "10/2024",
       "km": 28500,
       "country": "DE",
@@ -182,7 +182,11 @@
         "Registered 10/2024, after Berlin's switch to HW4; still ask for Controls › Software",
         "Pearl white, black interior, full service history, no accidents listed"
       ],
-      "firstSeen": null
+      "firstSeen": null,
+      "priceWas": {
+        "price": 43700,
+        "until": "2026-11-20"
+      }
     },
     {
       "id": "osnabruck-12-2024",
@@ -531,11 +535,11 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 18,
+    "toolCalls": 17,
     "sources": 8,
-    "listingsOpened": 3,
-    "tokensLowK": 55,
-    "tokensHighK": 90
+    "listingsOpened": 0,
+    "tokensLowK": 50,
+    "tokensHighK": 85
   },
   "removed": []
 }
