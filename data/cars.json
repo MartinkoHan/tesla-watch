@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -525,8 +525,9 @@
     "A damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč)",
     "A US import in Prague on Bazoš.cz (a 2024 Long Range at 689 000 Kč with a US-built VIN and Ukrainian plates)",
     "An exdrazby.cz auction Juniper",
-    "A Long Range from 11/2024 in Rhauderfehn, DE (40 299 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)",
-    "A reservation for a new Juniper in Bratislava on Autobazar.eu (56 320 €): the car is not built yet, delivery mid-December, and the seller adds a 1 300 € commission"
+    "A Long Range from 11/2024 in Rhauderfehn, DE (39 400 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)",
+    "A reservation for a new Juniper in Bratislava on Autobazar.eu (56 320 €): the car is not built yet, delivery mid-December, and the seller adds a 1 300 € commission",
+    "Four 2025 cars from one dealer in Erlenbach, DE, at 28 500–31 500 € (about half the usual price, no description: likely fake ads)"
   ],
   "alsoChecked": [
     "DriveTesla.sk: no Juniper left (the reserved 56 490 € one is gone)",
@@ -535,7 +536,7 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 17,
+    "toolCalls": 16,
     "sources": 8,
     "listingsOpened": 0,
     "tokensLowK": 50,
