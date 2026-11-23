@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -444,7 +444,7 @@
       "title": "Model Y Long Range Dual Motor AWD",
       "version": "Long Range",
       "juniper": false,
-      "price": 43000,
+      "price": 42900,
       "firstReg": "11/2024",
       "km": 50000,
       "country": "AT",
@@ -463,7 +463,11 @@
         "The ad text says about 48 500 km; the listing says 50 000 km",
         "It was gone on 11 Nov and is back online at a lower price (was 43 900 €)"
       ],
-      "firstSeen": "2026-11-13"
+      "firstSeen": "2026-11-13",
+      "priceWas": {
+        "price": 43000,
+        "until": "2026-11-22"
+      }
     },
     {
       "id": "arbing-9-2024",
@@ -527,7 +531,7 @@
     "An exdrazby.cz auction Juniper",
     "A Long Range from 11/2024 in Rhauderfehn, DE (39 400 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)",
     "A reservation for a new Juniper in Bratislava on Autobazar.eu (56 320 €): the car is not built yet, delivery mid-December, and the seller adds a 1 300 € commission",
-    "Four 2025 cars from one dealer in Erlenbach, DE, at 28 500–31 500 € (about half the usual price, no description: likely fake ads)"
+    "Four 2025 cars from one dealer in Straubing, DE, at 28 500–31 500 € (about half the usual price, no description: likely fake ads)"
   ],
   "alsoChecked": [
     "DriveTesla.sk: no Juniper left (the reserved 56 490 € one is gone)",
@@ -536,7 +540,7 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 16,
+    "toolCalls": 17,
     "sources": 8,
     "listingsOpened": 0,
     "tokensLowK": 50,
