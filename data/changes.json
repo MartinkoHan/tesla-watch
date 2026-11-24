@@ -1,12 +1,53 @@
 {
-  "date": "2026-11-23",
-  "since": "2026-11-22",
+  "date": "2026-11-24",
+  "since": "2026-11-23",
   "new": [],
-  "price": [
+  "price": [],
+  "sold": [
     {
-      "id": "stams-11-2024",
-      "from": 43000
+      "id": "feldkirch-9-2024",
+      "url": "https://www.autoscout24.de/angebote/5aff4897-4ba2-47f3-9929-c1bfe236461f",
+      "source": "autoscout24",
+      "title": "Model Y Performance AWD, Quicksilver",
+      "version": "Performance",
+      "juniper": false,
+      "price": 43500,
+      "firstReg": "9/2024",
+      "km": 39900,
+      "country": "AT",
+      "town": "Feldkirch",
+      "plate": "FK",
+      "seller": "Private seller",
+      "sellerType": "private",
+      "distanceKm": 720,
+      "hw4": "unconfirmed",
+      "autopilot": null,
+      "photo": "https://prod.pictures.autoscout24.net/listing-images/5aff4897-4ba2-47f3-9929-c1bfe236461f_74d5e2be-0354-4129-82f5-8a5f8be291f0.jpg/720x540.webp",
+      "swPhoto": null,
+      "notes": [
+        "Tow bar, summer and winter wheels"
+      ],
+      "firstSeen": null,
+      "countryName": "Austria",
+      "fees": 400,
+      "transport": 350,
+      "newForTax": false,
+      "vat": 0,
+      "vatWorst": null,
+      "vatBest": null,
+      "vatNote": null,
+      "total": 44250,
+      "totalWorst": null,
+      "totalBest": null,
+      "overCap": 0,
+      "hw4Label": "HW4 not confirmed",
+      "hw4Tone": "warn",
+      "apLabel": "FSD not mentioned",
+      "apTone": "plain",
+      "modelLabel": "2024 model, before Juniper",
+      "sellerLabel": "Private seller",
+      "isNew": false,
+      "removedReason": null
     }
-  ],
-  "sold": []
+  ]
 }
