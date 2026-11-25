@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -363,7 +363,7 @@
       "title": "Model Y Long Range Dual AWD",
       "version": "Long Range",
       "juniper": true,
-      "price": 54490,
+      "price": 52490,
       "firstReg": "7/2025",
       "km": 17002,
       "country": "AT",
@@ -381,8 +381,8 @@
       ],
       "firstSeen": null,
       "priceWas": {
-        "price": 54980,
-        "until": "2026-11-12"
+        "price": 54490,
+        "until": "2026-11-24"
       }
     },
     {
@@ -516,11 +516,11 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 20,
+    "toolCalls": 16,
     "sources": 8,
-    "listingsOpened": 2,
-    "tokensLowK": 60,
-    "tokensHighK": 100
+    "listingsOpened": 0,
+    "tokensLowK": 50,
+    "tokensHighK": 85
   },
   "removed": []
 }
