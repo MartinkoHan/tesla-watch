@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -512,7 +512,7 @@
     "DriveTesla.sk: no Juniper left (the reserved 56 490 € one is gone)",
     "AAA Auto SK and CZ, and the 2024 AWD cars on Autobazar.eu: VINs from before the HW4 switch",
     "Bazoš.sk: only RWD cars, Junipers over 57 000 €, or cars from before 8/2024",
-    "Autobazar.eu: a 2024 Performance AWD in Trenčín (41 900 €, 41 000 km, import dealer) has no VIN, registration month or photos, so HW4 cannot be judged; not listed"
+    "Autobazar.eu: a 2024 Performance AWD in Trenčín (41 900 €, 45 000 km, import dealer) has no VIN, registration month or photos, so HW4 cannot be judged; not listed"
   ],
   "notChecked": [],
   "run": {
