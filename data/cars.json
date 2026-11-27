@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -140,7 +140,7 @@
       "title": "Model Y Long Range Dual AWD",
       "version": "Long Range",
       "juniper": false,
-      "price": 42900,
+      "price": 41600,
       "firstReg": "10/2024",
       "km": 28500,
       "country": "DE",
@@ -159,8 +159,8 @@
       ],
       "firstSeen": null,
       "priceWas": {
-        "price": 43700,
-        "until": "2026-11-20"
+        "price": 42900,
+        "until": "2026-11-26"
       }
     },
     {
@@ -498,6 +498,62 @@
         "The photos are phone screenshots; none shows the Software screen"
       ],
       "firstSeen": "2026-11-17"
+    },
+    {
+      "id": "trutnov-10-2024",
+      "url": "https://auto.bazos.cz/inzerat/226991546/tesla-model-y-performance.php",
+      "source": "bazos.cz",
+      "title": "Model Y Performance AWD, Quicksilver",
+      "version": "Performance",
+      "juniper": false,
+      "price": 40077,
+      "firstReg": "10/2024",
+      "km": 28875,
+      "country": "CZ",
+      "town": "Trutnov",
+      "plate": "H",
+      "seller": "Private seller (Bazoš.cz)",
+      "sellerType": "private",
+      "vatInvoice": true,
+      "distanceKm": 450,
+      "hw4": "confirmed",
+      "autopilot": null,
+      "photo": null,
+      "photoNote": "Bazoš.cz doesn't allow its photos elsewhere. Open the ad to see them",
+      "swPhoto": null,
+      "notes": [
+        "The seller's screen photo shows VIN XP7YGCEL4RB489681, a Berlin build after the HW4 switch, and 28 875 km",
+        "First owner, bought in Czechia, tow bar, summer tyres, battery warranty to 10/2032",
+        "980 000 Kč, VAT deductible; the ad gives no registration month, so 10/2024 is taken from the warranty date"
+      ],
+      "firstSeen": "2026-11-27"
+    },
+    {
+      "id": "trencin-9-2024",
+      "url": "https://www.autobazar.eu/en/detail/tesla-model-y-75kwh-performance-awd-514-hp-a/Aekw74OG722/",
+      "source": "autobazar.eu",
+      "title": "Model Y Dual Motor AWD",
+      "version": "Long Range",
+      "juniper": false,
+      "price": 44500,
+      "firstReg": "9/2024",
+      "km": 44000,
+      "country": "SK",
+      "town": "Trenčín",
+      "plate": "TN",
+      "seller": "Import dealer (Autobazar.eu)",
+      "sellerType": "dealer",
+      "distanceKm": 0,
+      "hw4": "unconfirmed",
+      "autopilot": null,
+      "photo": "https://img.autobazar.eu/foto/MTIwMHg5MDAvZmlsdGVyczpxdWFsaXR5KDg1KTpmb3JtYXQoanBnKS9hZXU=/fA_JcMTC8_fss?st=3i6nuabw1NUYHSsgu92dC0kltQiyqVRnklPPwwDHsbo&ts=1795692145&e=0",
+      "swPhoto": null,
+      "notes": [
+        "The ad text says \"auto pilot 4\", which may mean HW4, but it shows no VIN or Software screen",
+        "The ad title says Performance, but the 514 HP listed is the Long Range's output",
+        "First owner, service book, not crashed, VAT can be deducted"
+      ],
+      "firstSeen": "2026-11-27"
     }
   ],
   "leftOut": [
@@ -516,11 +572,11 @@
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 16,
+    "toolCalls": 30,
     "sources": 8,
-    "listingsOpened": 0,
-    "tokensLowK": 50,
-    "tokensHighK": 85
+    "listingsOpened": 2,
+    "tokensLowK": 90,
+    "tokensHighK": 150
   },
   "removed": []
 }
