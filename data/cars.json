@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "cars": [
     {
       "id": "graz-8-2024",
@@ -357,35 +357,6 @@
       }
     },
     {
-      "id": "braunau-7-2025",
-      "url": "https://www.autoscout24.de/angebote/8adcb71d-ab13-44a6-8253-1690d9d9c39b",
-      "source": "autoscout24",
-      "title": "Model Y Long Range Dual AWD",
-      "version": "Long Range",
-      "juniper": true,
-      "price": 52490,
-      "firstReg": "7/2025",
-      "km": 17002,
-      "country": "AT",
-      "town": "Braunau",
-      "plate": "BR",
-      "seller": "Reibersdorfer Autowelt GmbH (dealer)",
-      "sellerType": "dealer",
-      "distanceKm": 400,
-      "hw4": "juniper",
-      "autopilot": null,
-      "photo": "https://prod.pictures.autoscout24.net/listing-images/8adcb71d-ab13-44a6-8253-1690d9d9c39b_f7e6d151-3932-4b96-b659-8a488d608937.jpg/720x540.webp",
-      "swPhoto": null,
-      "notes": [
-        "Grey; screen photos show the car menus but not the Software tab"
-      ],
-      "firstSeen": null,
-      "priceWas": {
-        "price": 54490,
-        "until": "2026-11-24"
-      }
-    },
-    {
       "id": "seitenstetten-1-2026",
       "url": "https://www.autoscout24.de/angebote/03c7a1a2-d5e0-4044-ae36-f94596a55818",
       "source": "autoscout24",
@@ -411,38 +382,6 @@
       ],
       "firstSeen": null,
       "photoNote": "No photos in this ad"
-    },
-    {
-      "id": "stams-11-2024",
-      "url": "https://www.autoscout24.de/angebote/e20b28d0-36c8-4022-a838-fcfb1faede22",
-      "source": "autoscout24",
-      "title": "Model Y Long Range Dual Motor AWD",
-      "version": "Long Range",
-      "juniper": false,
-      "price": 42900,
-      "firstReg": "11/2024",
-      "km": 50000,
-      "country": "AT",
-      "town": "Stams",
-      "plate": "IL",
-      "seller": "Private seller",
-      "sellerType": "private",
-      "vatInvoice": true,
-      "distanceKm": 580,
-      "hw4": "seller",
-      "autopilot": "enhanced",
-      "photo": "https://prod.pictures.autoscout24.net/listing-images/e20b28d0-36c8-4022-a838-fcfb1faede22_71c96bd3-1fe9-480f-892a-e6515b0e3156.jpg/720x540.webp",
-      "swPhoto": null,
-      "notes": [
-        "Quicksilver with white leather, S3XY LED strip, summer and winter wheels, 7 m charging cable",
-        "The ad text says about 48 500 km; the listing says 50 000 km",
-        "It was gone on 11 Nov and is back online at a lower price (was 43 900 €)"
-      ],
-      "firstSeen": "2026-11-13",
-      "priceWas": {
-        "price": 43000,
-        "until": "2026-11-22"
-      }
     },
     {
       "id": "arbing-9-2024",
@@ -557,24 +496,23 @@
     }
   ],
   "leftOut": [
-    "A damaged 6/2025 Performance in Prague (Bazoš.cz, 499 000 Kč)",
-    "A US import in Prague on Bazoš.cz (a 2024 Long Range at 689 000 Kč with a US-built VIN and Ukrainian plates)",
-    "An exdrazby.cz auction Juniper",
-    "A Long Range from 11/2024 in Rhauderfehn, DE (39 400 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)",
-    "A reservation for a new Juniper in Bratislava on Autobazar.eu (56 320 €): the car is not built yet, delivery mid-December, and the seller adds a 1 300 € commission",
-    "Four 2025 cars from one dealer in Straubing, DE, at 28 500–31 500 € (about half the usual price, no description: likely fake ads)"
+    "Four US imports in Prague on Bazoš.cz: a 2024 Long Range at 689 000 Kč with a US-built VIN and Ukrainian plates, two 2024 Long Range AWD at 600 000–650 000 Kč and a 2025 Performance at 920 000 Kč, all sold as imported from the USA",
+    "An exdrazby.cz auction Juniper (a public tender on Bazoš.cz)",
+    "A Long Range from 11/2024 in Rhauderfehn, DE (39 400 €): its Software screen shows HW3 (VIN XP7YGCEK6RB299565)"
   ],
   "alsoChecked": [
-    "DriveTesla.sk: no Juniper left (the reserved 56 490 € one is gone)",
-    "AAA Auto SK and CZ, and the 2024 AWD cars on Autobazar.eu: VINs from before the HW4 switch",
-    "Bazoš.sk: only RWD cars, Junipers over 57 000 €, or cars from before 8/2024",
-    "Autobazar.eu: a 2024 Performance AWD in Trenčín (41 900 €, 45 000 km, import dealer) has no VIN, registration month or photos, so HW4 cannot be judged; not listed"
+    "DriveTesla.sk: no Juniper or AWD 2024+ car left (only 2022–2023 cars and two RWD 2024 cars)",
+    "AAA Auto SK and CZ: the AWD cars have VINs from before the HW4 switch, and the rest are RWD",
+    "Autobazar.eu: 2024 AWD cars are from before 8/2024, over 70 000 km or already listed; a 2026 Long Range AWD in Galanta (58 190 €) is over the 57 000 € limit",
+    "Autobazar.eu: a 2024 Performance AWD in Trenčín (41 900 €, 45 000 km, import dealer) has no VIN, registration month or photos, so HW4 cannot be judged; not listed",
+    "Bazoš.sk: only RWD cars, cars from before 8/2024 or over 70 000 km, and a 75 000 km Košice car with HW3",
+    "Bazoš.cz: other Model Y ads are accessories, RWD, 2022–2023 cars, cars from before 8/2024 or over 70 000 km"
   ],
   "notChecked": [],
   "run": {
-    "toolCalls": 30,
+    "toolCalls": 26,
     "sources": 8,
-    "listingsOpened": 2,
+    "listingsOpened": 9,
     "tokensLowK": 90,
     "tokensHighK": 150
   },
